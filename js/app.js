@@ -5,6 +5,7 @@ const playlistList = document.querySelector("#playlist-list");
 const playlistEmpty = document.querySelector("#playlist-empty");
 const playlistDuration = document.querySelector("#playlist-duration");
 const searchInput = document.querySelector("#search");
+const genreSelect = document.querySelector("#genre");
 const collectionEmpty = document.querySelector("#collection-empty");
 
 // Store the songs added to the playlist
@@ -132,22 +133,28 @@ function renderSongs(songsToDisplay) {
     songList.append(card);
   });
 }
-// Search by song title or artist
+// Filter songs by search text and genre
 function updateCollection() {
   const searchText = searchInput.value.trim().toLowerCase();
+  const selectedGenre = genreSelect.value;
 
   const matchingSongs = songs.filter((song) => {
     const titleMatches = song.title.toLowerCase().includes(searchText);
     const artistMatches = song.artist.toLowerCase().includes(searchText);
 
-    return titleMatches || artistMatches;
+    const matchesSearch = titleMatches || artistMatches;
+    const matchesGenre =
+      selectedGenre === "all" || song.genre === selectedGenre;
+
+    return matchesSearch && matchesGenre;
   });
 
   renderSongs(matchingSongs);
 }
 
-// Update the collection while the user types
+// Update the collection when search or genre changes
 searchInput.addEventListener("input", updateCollection);
+genreSelect.addEventListener("change", updateCollection);
 
 // Display the collection and playlist when the page loads
 updateCollection();
