@@ -20,7 +20,9 @@ function loadPlaylist() {
       return [];
     }
 
-    return songs.filter((song) => savedIds.includes(song.id));
+    return savedIds
+      .map((songId) => songs.find((song) => song.id === songId))
+      .filter((song) => song !== undefined);
   } catch (error) {
     console.warn("Could not load the playlist:", error);
     return [];
