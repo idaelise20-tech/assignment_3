@@ -1,0 +1,31 @@
+:root {
+  /* Colors */
+  --color-background: #f4f5f7;
+  --color-surface: #ffffff;
+  --color-text: #202332;
+  --color-text-muted: #555b6e;
+  --color-primary: #5438a8;
+  --color-primary-hover: #402880;
+  --color-border: #767b8a;
+
+  /* Fonts */
+  --font-body: "Inter", Arial, sans-serif;
+
+  --font-size-small: 0.875rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2.5rem;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-small: 0.5rem;
+  --spacing-medium: 1rem;
+  --spacing-large: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  /* Layout */
+  --content-max-width: 75rem;
+  --border-radius: 0.5rem;
+}

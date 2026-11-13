@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Music Playlist</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Load song data before the application -->
+    <script src="data/songs.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__title">Music Playlist</h1>
+      <p class="header__description">
+        Discover songs and create your own playlist.
+      </p>
+    </header>
+
+    <main class="main">
+      <section class="collection" aria-labelledby="collection-title">
+        <h2 class="collection__title" id="collection-title">
+          Music Collection
+        </h2>
+        <div class="collection__controls">
+          <!-- Search by title or artist -->
+          <div class="collection__field">
+            <label for="search">Search songs</label>
+            <input
+              class="collection__input"
+              type="search"
+              id="search"
+              placeholder="Search by title or artist"
+            />
+          </div>
+
+          <!-- Filter by genre -->
+          <div class="collection__field">
+            <label for="genre">Genre</label>
+            <select class="collection__select" id="genre">
+              <option value="all">All genres</option>
+              <option value="Electronic">Electronic</option>
+              <option value="Rock">Rock</option>
+              <option value="Pop">Pop</option>
+              <option value="Metal">Metal</option>
+              <option value="Jazz">Jazz</option>
+            </select>
+          </div>
+
+          <!-- Sort the collection -->
+          <div class="collection__field">
+            <label for="sort">Sort by</label>
+            <select class="collection__select" id="sort">
+              <option value="title">Title</option>
+              <option value="artist">Artist</option>
+              <option value="duration">Duration</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- JavaScript will insert song cards here -->
+        <div class="collection__grid" id="song-list"></div>
+
+        <p class="collection__empty" id="collection-empty" hidden>
+          No songs match your search or filter.
+        </p>
+      </section>
+
+      <section class="playlist" aria-labelledby="playlist-title">
+        <h2 class="playlist__title" id="playlist-title">My Playlist</h2>
+        <!-- Total duration of the playlist -->
+        <p class="playlist__duration">
+          Total duration: <span id="playlist-duration">0:00</span>
+        </p>
+
+        <!-- Shown when the playlist is empty -->
+        <p class="playlist__empty" id="playlist-empty">
+          Your playlist is empty. Add songs from the music collection.
+        </p>
+
+        <!-- JavaScript will insert playlist items here -->
+        <ul class="playlist__list" id="playlist-list"></ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__text">Student project – Assignment 3</p>
+    </footer>
+  </body>
+</html>
