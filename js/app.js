@@ -4,6 +4,8 @@ const songList = document.querySelector("#song-list");
 const playlistList = document.querySelector("#playlist-list");
 const playlistEmpty = document.querySelector("#playlist-empty");
 const playlistDuration = document.querySelector("#playlist-duration");
+const searchInput = document.querySelector("#search");
+const collectionEmpty = document.querySelector("#collection-empty");
 
 // Store the songs added to the playlist
 const playlist = loadPlaylist();
@@ -96,34 +98,57 @@ function removeFromPlaylist(songId) {
   savePlaylist();
   renderPlaylist();
 }
-// Create a card for each song
-songs.forEach((song) => {
-  const card = document.createElement("article");
-  card.classList.add("song-card");
+// Display the selected songs in the music collection
+function renderSongs(songsToDisplay) {
+  songList.replaceChildren();
+  collectionEmpty.hidden = songsToDisplay.length > 0;
+  // Create a card for each song
+  songsToDisplay.forEach((song) => {
+    const card = document.createElement("article");
+    card.classList.add("song-card");
 
-  const title = document.createElement("h3");
-  title.classList.add("song-card__title");
-  title.textContent = song.title;
+    const title = document.createElement("h3");
+    title.classList.add("song-card__title");
+    title.textContent = song.title;
 
-  const artist = document.createElement("p");
-  artist.classList.add("song-card__artist");
-  artist.textContent = song.artist;
+    const artist = document.createElement("p");
+    artist.classList.add("song-card__artist");
+    artist.textContent = song.artist;
 
-  const details = document.createElement("p");
-  details.classList.add("song-card__details");
-  details.textContent = `${song.genre} · ${formatDuration(song.duration)}`;
+    const details = document.createElement("p");
+    details.classList.add("song-card__details");
+    details.textContent = `${song.genre} · ${formatDuration(song.duration)}`;
 
-  const addButton = document.createElement("button");
-  addButton.classList.add("song-card__button");
-  addButton.type = "button";
-  addButton.textContent = "Add to playlist";
+    const addButton = document.createElement("button");
+    addButton.classList.add("song-card__button");
+    addButton.type = "button";
+    addButton.textContent = "Add to playlist";
 
-  addButton.addEventListener("click", () => {
-    addToPlaylist(song);
+    addButton.addEventListener("click", () => {
+      addToPlaylist(song);
+    });
+
+    card.append(title, artist, details, addButton);
+    songList.append(card);
+  });
+}
+// Search by song title or artist
+function updateCollection() {
+  const searchText = searchInput.value.trim().toLowerCase();
+
+  const matchingSongs = songs.filter((song) => {
+    const titleMatches = song.title.toLowerCase().includes(searchText);
+    const artistMatches = song.artist.toLowerCase().includes(searchText);
+
+    return titleMatches || artistMatches;
   });
 
-  card.append(title, artist, details, addButton);
-  songList.append(card);
-});
-// Display the saved playlist when the page loads
+  renderSongs(matchingSongs);
+}
+
+// Update the collection while the user types
+searchInput.addEventListener("input", updateCollection);
+
+// Display the collection and playlist when the page loads
+updateCollection();
 renderPlaylist();
