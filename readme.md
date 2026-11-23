@@ -1,84 +1,75 @@
-# Music Playlist – Innlevering 3
+# Music Playlist – Assignment 3
 
-En responsiv nettside der brukeren kan utforske en musikksamling og
-sette sammen sin egen spilleliste.
+A responsive website where users can browse a music collection and build their own playlists.
 
-Prosjektet er laget som en individuell innlevering i Fullstack-utvikling.
-Formålet er å øve på JavaScript, array-metoder, DOM-manipulering,
-hendelser og lokal lagring.
+This project is an individual assignment for the Full-Stack Development course. The goal is to practice using JavaScript array methods, manipulating the DOM, handling events, and saving data in the browser.
 
-## Funksjoner
+## Features
 
-- Viser alle de 23 sangene fra den utdelte datafilen.
-- Søker etter sangtittel eller artist mens brukeren skriver.
-- Filtrerer sangene etter sjanger.
-- Sorterer etter tittel, artist eller spilletid.
-- Kombinerer søk, filtrering og sortering.
-- Lar brukeren legge til og fjerne sanger fra spillelisten.
-- Hindrer at samme sang legges til flere ganger.
-- Viser spillelistens samlede spilletid.
-- Lagrer spillelisten med localStorage.
-- Viser meldinger når spillelisten er tom eller ingen sanger matcher søket.
+- Displays all 23 songs from the provided data file.
+- Lets users search by song title or artist as they type.
+- Filters songs by genre.
+- Sorts songs by title, artist, or duration.
+- Lets users combine search, filtering, and sorting.
+- Lets users add songs to their playlist and remove them.
+- Prevents users from adding the same song twice.
+- Displays the total duration of the playlist.
+- Saves the playlist using `localStorage`.
+- Displays a message when the playlist is empty or no songs match the search.
 
-## Teknologier
+## Technologies
 
-- HTML for struktur og innhold.
-- CSS for utseende og responsivt oppsett.
-- JavaScript for funksjonalitet.
-- Google Fonts for skrifttypen Inter.
-- Git og GitHub for versjonskontroll og lagring av kildekode.
+- HTML for page structure and content.
+- CSS for styling and responsive layout.
+- JavaScript for search, filtering, sorting, and playlist management.
+- Google Fonts for the Inter typeface.
+- Git for version control and GitHub for hosting the source code.
 
-Prosjektet bruker ingen JavaScript-biblioteker eller rammeverk.
+The project uses plain JavaScript without libraries or frameworks.
 
-## Filstruktur
+## File structure
 
-- `index.html` – sidens HTML-struktur.
-- `css/reset.css` – grunnleggende tilbakestilling av nettleserstiler.
-- `css/variables.css` – variabler for farger, skrift og størrelser.
-- `css/styles.css` – layout, komponenter og responsive tilpasninger.
-- `data/songs.js` – sangdata levert med oppgaven.
-- `js/app.js` – søk, filtrering, sortering og håndtering av spillelisten.
-- `assets/` – mappe for eventuelle bilder og andre ressurser.
-- `readme.md` – prosjektbeskrivelse og lenker.
+- `index.html` – HTML structure of the page.
+- `css/reset.css` – resets default browser styles.
+- `css/variables.css` – defines variables for colors, typography, and sizing.
+- `css/styles.css` – defines the layout, component styles, and responsive adjustments.
+- `data/songs.js` – contains the song data provided with the assignment.
+- `js/app.js` – handles search, filtering, sorting, and playlist management.
+- `assets/` – folder for optional images and other project assets.
+- `readme.md` – project description and links.
 
-## Kjør prosjektet lokalt
+## Run the project locally
 
-1. Last ned eller klon prosjektet.
-2. Åpne prosjektmappen i Visual Studio Code.
-3. Åpne `index.html` med Live Server.
+1. Download or clone the repository.
+2. Open the project folder in Visual Studio Code.
+3. Open `index.html` with Live Server.
 
-Prosjektet krever ingen installasjon av pakker eller byggesteg.
+The project requires no package installation or build step.
 
-## Lagring av spillelisten
+## Playlist storage
 
-Spillelisten lagres som sang-id-er i nettleserens localStorage.
-Når siden åpnes igjen, hentes informasjonen om sangene fra `songs.js`.
+The app saves the playlist as a list of song IDs in the browser’s `localStorage`. When the page is opened again, the app uses those IDs to look up the song details in `songs.js`.
 
-Lagringen gjelder nettleseren og nettadressen som brukes.
-Spillelisten synkroniseres ikke mellom enheter og kan forsvinne
-dersom nettleserdata slettes.
+The saved playlist is specific to the browser and the site where it was created. It does not sync across devices. Clearing the site’s browser data removes the saved playlist.
 
-## Utforming og tilgjengelighet
+## Design and accessibility
 
-- Responsivt oppsett med CSS Grid og Flexbox.
-- CSS-klasser navngitt etter BEM-konvensjonen.
-- Semantiske HTML-elementer.
-- Synlige etiketter for søk og nedtrekkslister.
-- Tydelig fokusmarkering ved tastaturnavigasjon.
-- Beskrivende navn for fjern-knappene ved bruk av skjermleser.
+- Responsive layout using CSS Grid and Flexbox.
+- CSS classes named using the BEM convention.
+- Semantic HTML elements.
+- Visible labels for the search field and dropdown menus.
+- Clear focus indicators for keyboard navigation.
+- Descriptive labels that tell screen reader users which song each remove button removes.
 
-## Kilder og bruk av KI
+## Sources and use of AI
 
-Sangdataene i `data/songs.js` er levert med oppgaven og er brukt uendret.
+The song data in `data/songs.js` was provided with the assignment and is used unchanged.
 
-ChatGPT er brukt til veiledning, forklaring av begreper,
-feilsøking, oversettelse og gjennomgang av koden.
-Deler av HTML-, CSS- og JavaScript-koden bygger på disse forslagene.
+I used ChatGPT for guidance, explanations of concepts, debugging, translation, and code review. Parts of the HTML, CSS, and JavaScript code are based on its suggestions.
 
-Skrifttypen Inter er hentet fra Google Fonts:
-https://fonts.google.com/specimen/Inter
+The Inter typeface is available from [Google Fonts](https://fonts.google.com/specimen/Inter).
 
-## Lenker
+## Links
 
-- GitHub-repository: Legges inn når repositoryet er opprettet.
-- Publisert nettside: Legges inn når nettsiden er publisert.
+- GitHub repository: To be added once the repository is created.
+- Live website: To be added once the site is published.
