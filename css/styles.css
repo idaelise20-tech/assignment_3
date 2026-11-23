@@ -2,6 +2,7 @@
 body {
   font-family: var(--font-body);
   font-size: var(--font-size-medium);
+  min-width: 21rem;
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-background);
@@ -113,7 +114,7 @@ body {
 }
 
 .playlist__empty {
-  color: var(--color-song-card);
+  color: var(--color-header-text);
 }
 
 .collection__empty {
@@ -209,14 +210,14 @@ body {
     grid-template-columns: 2fr 1fr 1fr;
   }
 }
-.collection__grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
 
 /* Desktop */
 @media (min-width: 64rem) {
   .main {
     grid-template-columns: 2fr 1fr;
     align-items: start;
+  }
+  .collection__playlist-link {
+    display: none;
   }
 }
