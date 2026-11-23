@@ -71,6 +71,6 @@ The Inter typeface is available from [Google Fonts](https://fonts.google.com/spe
 
 ## Links
 
--https://github.com/idaelise20-tech/assignment_3
+- [GitHub repository](https://github.com/idaelise20-tech/assignment_3)
 
 - [Live website](https://idaelise20-tech.github.io/assignment_3/)

@@ -2,7 +2,7 @@
 body {
   font-family: var(--font-body);
   font-size: var(--font-size-medium);
-  min-width: 21rem;
+
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-background);
@@ -202,6 +202,10 @@ body {
 
 .playlist__remove-button:hover {
   background-color: var(--color-background);
+}
+
+.playlist__remove-button:focus-visible {
+  outline-color: var(--color-surface);
 }
 
 /* Tablet and larger */
