@@ -9,18 +9,25 @@ body {
 
 /* Header */
 .header {
+  margin-bottom: var(--spacing-xl);
   padding: var(--spacing-xxl) var(--spacing-medium);
   text-align: center;
+  background: linear-gradient(
+    120deg,
+    var(--color-header-start),
+    var(--color-header-end)
+  );
 }
 
 .header__title {
   margin-bottom: var(--spacing-small);
+  color: var(--color-surface);
   font-size: var(--font-size-xxl);
-  color: var(--color-primary);
+  line-height: 1.15;
 }
 
 .header__description {
-  color: var(--color-text-muted);
+  color: var(--color-header-text);
 }
 
 /* Main layout */

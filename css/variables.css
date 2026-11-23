@@ -1,12 +1,15 @@
 :root {
   /* Colors */
-  --color-background: #f4f5f7;
+  --color-background: #e8ebf1;
   --color-surface: #ffffff;
   --color-text: #202332;
   --color-text-muted: #555b6e;
   --color-primary: #5438a8;
   --color-primary-hover: #402880;
   --color-border: #767b8a;
+  --color-header-start: #201735;
+  --color-header-end: #5438a8;
+  --color-header-text: #f1ebff;
 
   /* Fonts */
   --font-body: "Inter", Arial, sans-serif;
