@@ -80,7 +80,7 @@ body {
   padding: var(--spacing-small) var(--spacing-medium);
   color: var(--color-text);
   background-color: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-input-border);
   border-radius: var(--border-radius);
 }
 
@@ -170,7 +170,7 @@ body {
   align-items: flex-start;
   gap: var(--spacing-small);
   padding: var(--spacing-medium);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-playlist-item-border);
   border-radius: var(--border-radius);
   overflow-wrap: anywhere;
 }

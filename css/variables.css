@@ -12,6 +12,8 @@
   --color-header-text: #f1ebff;
   --color-song-card: #f2edff;
   --color-playlist-panel: #6f35db;
+  --color-playlist-item-border: #ffb347;
+  --color-input-border: #b85c00;
 
   /* Fonts */
   --font-body: "Inter", Arial, sans-serif;
