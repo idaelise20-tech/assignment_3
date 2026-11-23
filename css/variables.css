@@ -10,6 +10,8 @@
   --color-header-start: #201735;
   --color-header-end: #5438a8;
   --color-header-text: #f1ebff;
+  --color-song-card: #f2edff;
+  --color-playlist-panel: #2b2040;
 
   /* Fonts */
   --font-body: "Inter", Arial, sans-serif;
